@@ -1,0 +1,36 @@
+/* 1. Target the component itself (<app-your-component>) */
+:host {
+  /* Necessary to ensure the host element uses the available height */
+  display: flex;
+  height: 100%;
+}
+ 
+/* 2. Target the main page container */
+.editor-page {
+  /* Set the container to be the full width/height of the host */
+  height: 100%;
+  width: 100%;
+  /* Make the container a column Flex container */
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  padding: 10px; /* Optional: Add some padding around the edges */
+  box-sizing: border-box; /* Includes padding in the 100% height calculation */
+}
+ 
+/* 3. Target the fixed header (Room ID) */
+h3 {
+  /* Prevents the header from shrinking/growing, maintaining its natural height */
+  flex-shrink: 0; 
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ 
+/* 4. Target the editor area */
+.code-editor {
+  /* This is the key: tells the editor to take up all remaining vertical space */
+  flex-grow: 1; 
+  /* Ensures the editor can scroll internally if its content exceeds the space */
+  overflow: auto; 
+  /* Optional: Add a border for visual confirmation */
+  border: 1px solid #ccc;
+}

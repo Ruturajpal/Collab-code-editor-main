@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+
+/* Variables */
+$primary-color: #4a90e2;
+$secondary-color: #f39c12;
+$text-color: #333;
+$font-stack: "Roboto", sans-serif;
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: $font-stack;
+  background: #fafafa;
+  color: $text-color;
+}
+
+/* Utility classes */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+
+.text-center { text-align: center; }
+.text-bold { font-weight: bold; }
+
+/* Button styles */
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: $primary-color;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-secondary {
+  background: $secondary-color;
+}
